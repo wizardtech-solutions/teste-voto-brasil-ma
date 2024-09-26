@@ -1,0 +1,59 @@
+<section class="content_form">
+
+    <div class="box_voltar_title">
+        <a href="/">
+            <span class="material-symbols-outlined">
+                keyboard_return
+            </span>
+        </a>
+        <h2 class="title">Cadastro Votação</h2>
+        <span class="material-symbols-outlined">
+            info
+        </span>
+    </div>
+
+    <div class="content_bane">
+        <div class="box_msg">
+            <p>Atenção ao preencher os campos de cadastro</p>
+        </div>
+        <div class="box_img"><img src="/img/6202983_3173481-removebg-preview.png" alt=""></div>
+    </div>
+
+
+    <form action="/cadastro/cadastro_titulo" method="post" id="form" class="form">
+        <div class="box_item">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" placeholder="Nome completo">
+        </div>
+        <div class="box_item">
+            <label for="number_telefone">Número Telefone</label>
+            <input type="tel" id="number_telefone" name="number_telefone" maxlength="15"
+                placeholder="Número do telefone">
+        </div>
+
+        {{!-- <div class="box_item">
+            <label for="cep">CEP</label>
+            <input type="text" id="cep" name="cep" maxlength="10" placeholder="00.000-000">
+        </div> --}}
+        <input type="hidden"  name="cidade" id="cidade" value={{municipio}}>
+
+        {{!-- <div class="box_item">
+            <label for="cidade">Municipio que voto:</label>
+            <select name="cidade" id="cidade" >
+                <option value="">Selecione o Municipio</option>
+                <option >{{municipio}}</option>
+            </select>
+        </div> --}}
+
+        <div class="content_btn-form">
+            <button id="btn-submit-cadastro" type="submit">Cadastrar</button>
+            <p class="loading-cad" id="loading-cad">
+                <img class="img-load" src="/img/loading.svg" alt="" srcset="">
+                Cadastrando, aguarde...
+            </p>
+        </div>
+    </form>
+
+
+</section>
+<script src="../validateForm.mjs" defer></script>
