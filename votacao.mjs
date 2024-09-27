@@ -92,6 +92,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
                 // Tenta carregar a imagem com diferentes extensões
                 const basePath = `/img/imgCand/FMA${candidato.SQ_CANDIDATO}_div`;
+                
                 const formats = ['.jpg', '.jpeg'];
                 let imageLoaded = false;
 
